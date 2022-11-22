@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        
+        <div class="row">
+        <div class="col-md-6 contenido">
+            <img src="formato.jpg" alt="" >
+            <h1>CERTIFICADO DE {{$tipo}}</h1>
+            <hr>
+            <p>Beneficiario: {{$beneficiario->beneficiario}}</p>
+            <p>Nro. C.I. : {{$beneficiario->ci}}</p>
+            <p>Comunidad: {{$beneficiario->ubicacion}}</p>
+            
+        </div>
+        </div>
+    </body>
+</html>

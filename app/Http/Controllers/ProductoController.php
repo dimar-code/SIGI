@@ -101,7 +101,8 @@ class ProductoController extends Controller
             [
                 'nombre' => 'required',
                 'precio' => 'required',
-                'categoria' => 'required',
+                'descripcion' => 'required',
+                'estado' => 'required',
                 'stock' => 'required'
             ]
         );

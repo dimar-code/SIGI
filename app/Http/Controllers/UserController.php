@@ -40,15 +40,16 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $users = new User();
-        $users->nombres = strtoupper($request->nombres);
+        $users->nombre = strtoupper($request->nombre);
         $users->apellidos = strtoupper($request->apellidos);
-        $users->direccion = strtoupper($request->direccion);
-        $users->telefono = strtoupper($request->telefono);
-        $users->genero = strtoupper($request->genero);
-        $users->estado = strtoupper('activo');
-        $users->email = $request->email;
-        $users->password = \Hash::make($request->password);
         $users->rol_id = $request->rol_id;
+        $users->direccion = strtoupper($request->direccion);
+        $users->genero = strtoupper($request->genero);
+        $users->telefono = strtoupper($request->telefono);
+        $users->email = $request->email;
+        $users->estado = strtoupper('activo');
+        $users->password = $request->password;
+
         $users->save();
 
         return redirect()->route('usuarios.index');
@@ -96,7 +97,7 @@ class UserController extends Controller
         $users->estado = strtoupper($request->estado);
         $users->email = $request->email;
         if ($request->password) {
-            $users->password = \Hash::make($request->password);
+            $users->password = $request->password;
         }
         $users->rol_id = $request->rol_id;
         $users->save();

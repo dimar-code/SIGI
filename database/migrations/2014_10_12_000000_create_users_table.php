@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('apellidos');
+            $table->unsignedBigInteger('rol_id');
+            $table->foreign('rol_id')->references('id')->on('roles');
             $table->string('direccion');
             $table->string('genero');
             $table->string('telefono');
@@ -25,8 +27,6 @@ return new class extends Migration
             $table->integer('estado');
             $table->string('password');
             $table->rememberToken();
-            $table->unsignedBigInteger('rol_id');
-            $table->foreign('rol_id')->references('id')->on('roles');
             $table->timestamps();
         });
     }

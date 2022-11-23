@@ -94,7 +94,7 @@
                     <div class="info">
                         <a href="#" class="d-block">Dimar Coca</a>
                         <hr>
-                        {{ Auth::user()->rol->nombre }}
+                        {{-- {{ Auth::user()->rol->nombre }} --}}
                     </div>
                 </div>
 
